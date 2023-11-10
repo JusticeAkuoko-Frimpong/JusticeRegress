@@ -1,2 +1,2 @@
 # JusticeRegress
-A package for my homework
+A package for Linear Regression
