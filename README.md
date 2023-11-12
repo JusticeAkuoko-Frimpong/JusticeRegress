@@ -23,7 +23,7 @@ devtools::install_github("JusticeAkuoko-Frimpong/Regress")
 ### Example
 Using the mtcars dataset. Suppose we are interested in fitting a simple linear regression model of hp on mpg
 ```r
-library(JusticeRegress)
+library(Regress)
 data(mtcars)
 X=cbind(mtcars$hp) #For Simple Linear Regression X must be a column vector
 Y=mtcars$mpg
