@@ -18,7 +18,7 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
 Install the development version from [GitHub](https://github.com/) with:
 ```r
 # Install Regress from GitHub
-devtools::install_github("JusticeAkuoko-Frimpong/JusticeRegress")
+devtools::install_github("JusticeAkuoko-Frimpong/Regress")
 ```
 ### Example
 Using the mtcars dataset. Suppose we are interested in fitting a simple linear regression model of hp on mpg
