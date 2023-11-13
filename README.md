@@ -1,7 +1,8 @@
 # Regress R Package
 
 [![R-CMD-check](https://github.com/JusticeAkuoko-Frimpong/Regress/workflows/R-CMD-check/badge.svg)](https://github.com/JusticeAkuoko-Frimpong/Regress/actions)
-[![codecov](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress/master/graph/badge.svg)](https://app.codecov.io/gh/JusticeAkuoko-Frimpong/Regress/tree/master/R)
+[![codecov](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress/master/main/graph/badge.svg?token=abcdefg123456)](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress)
+
 
 
 The goal of the Regress package is to provide function to fit Simple and Multiple Linear Regression models.
