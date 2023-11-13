@@ -1,5 +1,7 @@
 # Regress R Package
-https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml)
+  <!-- badges: end -->
 
 The goal of the Regress package is to provide function to fit Simple and Multiple Linear Regression models.
 
