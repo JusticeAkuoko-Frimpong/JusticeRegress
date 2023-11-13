@@ -1,4 +1,8 @@
 # Regress R Package
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 
 The goal of the Regress package is to provide function to fit Simple and Multiple Linear Regression models.
 
@@ -18,7 +22,7 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
 Install the development version from [GitHub](https://github.com/) with:
 ```r
 # Install Regress from GitHub
-devtools::install_github("JusticeAkuoko-Frimpong/Regress")
+devtools::install_github("JusticeAkuoko-Frimpong/Regress@master")
 ```
 ### Example
 Using the mtcars dataset. Suppose we are interested in fitting a simple linear regression model of hp on mpg
