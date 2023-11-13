@@ -17,3 +17,7 @@ Suggests:
     bench
 VignetteBuilder: knitr
 Config/testthat/edition: 3
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp

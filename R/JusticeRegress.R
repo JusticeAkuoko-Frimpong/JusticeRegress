@@ -32,6 +32,11 @@
 #'Y=c(27,29,23,20,21)
 #'X=cbind(c(4,7,6,2,3),c(0,1,1,0,0),c(1,1,0,0,1))
 #'JusticeRegress(Y,X) #without specifying alpha.Still uses 0.05
+#' ## usethis namespace: start
+#' @importFrom Rcpp sourceCpp  ##usethis namespace: end
+#'
+#'## usethis namespace: start
+#' @useDynLib Regress, .registration = TRUE ## usethis namespace: end
 #'
 #' @importFrom stats pt qt
 #'@export
