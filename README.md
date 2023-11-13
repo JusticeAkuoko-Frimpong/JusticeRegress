@@ -1,7 +1,7 @@
 # Regress R Package
 
 [![R-CMD-check](https://github.com/JusticeAkuoko-Frimpong/Regress/workflows/R-CMD-check/badge.svg)](https://github.com/JusticeAkuoko-Frimpong/Regress/actions)
-[![codecov](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress/master/main/graph/badge.svg?token=abcdefg123456)](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress)
+[![codecov](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress/branch/master/graph/badge.svg?token=abcdefg123456)](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress)
 
 
 
