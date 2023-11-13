@@ -26,4 +26,7 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Install suggested packages
+        run: R -e 'install.packages("bench")'
+
       - uses: r-lib/actions/check-r-package@v2
