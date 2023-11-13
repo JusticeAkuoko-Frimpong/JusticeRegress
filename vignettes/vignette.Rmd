@@ -1,0 +1,100 @@
+---
+title: "Regress-General usage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+This vignette will explain how to use the package for fitting both Simple Linear Regression (SLR) and Multiple Linear Regression (MLR) models using a simulated data. Begin by loading the package and setting a seed for reproducibility.
+```{r setup}
+library(Regress)
+set.seed(700)
+```
+
+We will first simulate a data to fit the models. This data contains two predictor variables($X_{1}, X_{2}$) and a response variable ($Y$).
+```{r}
+# Define parameters
+n = 100
+a = -3
+b = 2
+c = 4
+error_std = 7
+# Generate x values
+X1 = runif(n, min = -25, max = 25)
+X2 = runif(n, min = -25, max = 25)
+# Define the error term
+epsilon = rnorm(n, 0, error_std)
+# Compute the y values
+Y = c + a*X1 + b*X2 + epsilon
+# Combine them to get the dataset
+Data = data.frame(X1 = X1, X2 = X2, Y = Y)
+attach(Data)
+head(Data)
+```
+
+Next, we'll fit a simple linear regression model with one of the predictors. The predictor variable has to be a column vector.
+```{r}
+X = cbind(X1)
+model1 = JusticeRegress(Y = Y,X =X)
+model1
+```
+We will also fit a multiple linear regression model with the dataset. You will need to pass just one X in the function, so you need to make X a matrix with each column a different variable.
+```{r}
+X = cbind(X1,X2)
+model2 = JusticeRegress(Y = Y, X = X)
+model2
+```
+
+# Comparison of the results from SLR model with the lm() function
+Here, we compare the results from the two models with lm() function using all.equal() to demonstrate correctness of the JusticeRegress function. Let us compare the estimates from the SLR models.
+
+```{r}
+# Fit the SLR with the lm() function
+lm_model1 = lm(Y~X1, data = Data)
+```
+
+We used as.matrix() because because coef(summary(lm_model1)) returns a matrix. Set "check.attributes = FALSE" because the outputs have different names/attributes.
+```{r}
+all.equal(coef(summary(lm_model1)),as.matrix(model1$Estimates), check.attributes=FALSE)
+```
+Let us use "bench::mark" to compare the efficiency of JusticeRegress() and lm(). The numeric values are the same (ignoring the attributes), so we set "check=FALSE" here to ignore the attributes.
+```{r}
+benchmark1 = bench::mark(
+ my_fun = model1$Estimates, 
+ lm_fun =  coef(summary(lm_model1)), 
+ iterations = 100,
+ check = FALSE
+)
+# Print the result
+print(benchmark1)
+```
+# Comparison of the results from MLR model with the lm() function
+We compare the estimates from the MLR models.
+```{r}
+# Fit the MLR with the lm() function
+lm_model2 = lm(Y~X1+X2, data = Data)
+all.equal(coef(summary(lm_model2)),as.matrix(model2$Estimates), check.attributes=FALSE)
+```
+
+Comparing the efficiency between the two fits
+```{r}
+benchmark2 = bench::mark(
+ my_fun = model2$Estimates, 
+ lm_fun =  coef(summary(lm_model2)), 
+ iterations = 100,
+ check = FALSE
+)
+# Print the result
+print(benchmark2)
+```
