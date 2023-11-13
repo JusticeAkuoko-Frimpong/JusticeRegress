@@ -4,7 +4,9 @@
   [![R-CMD-check](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml)
   <!-- badges: end -->
 
-
+<!-- badges: start -->
+  [![Codecov test coverage](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress/branch/main/graph/badge.svg)](https://app.codecov.io/gh/JusticeAkuoko-Frimpong/Regress?branch=main)
+  <!-- badges: end -->
 The goal of the Regress package is to provide function to fit Simple and Multiple Linear Regression models.
 
 ## Description
