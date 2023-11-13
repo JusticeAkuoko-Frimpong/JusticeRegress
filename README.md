@@ -4,6 +4,7 @@
 <!-- badges: end -->
 
 
+
 The goal of the Regress package is to provide function to fit Simple and Multiple Linear Regression models.
 
 ## Description
