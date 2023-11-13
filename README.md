@@ -1,12 +1,7 @@
 # Regress R Package
 
-<!-- badges: start -->
-  [![R-CMD-check](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JusticeAkuoko-Frimpong/Regress/actions/workflows/R-CMD-check.yaml)
-  <!-- badges: end -->
+[![R-CMD-check](https://github.com/your-username/your-repository-name/workflows/R-CMD-check/badge.svg)](https://github.com/your-username/your-repository-name/actions)
 
-<!-- badges: start -->
-  [![Codecov test coverage](https://codecov.io/gh/JusticeAkuoko-Frimpong/Regress/branch/main/graph/badge.svg)](https://app.codecov.io/gh/JusticeAkuoko-Frimpong/Regress?branch=main)
-  <!-- badges: end -->
 The goal of the Regress package is to provide function to fit Simple and Multiple Linear Regression models.
 
 ## Description
